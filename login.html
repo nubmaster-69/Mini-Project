@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="icon" href="./img/page-icon/man.png">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <title>Log in</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="side-img">
+            <img src="./img/background/side-img-6.png" alt="">
+        </div>
+
+        <div class="login-form">
+
+            <h2>Log in</h2>
+
+            <div class="input-field">
+                <label for="user" class="fas fa-user"></label>
+                <input type="text" id="user" placeholder="Username">
+            </div>
+
+            <div class="input-field">
+                <label for="pass" class="fas fa-lock"></label>
+                <input type="password" id="pass" placeholder="Password" required>
+                <i onclick="showPassword()" id="pass-icon" class="fas fa-eye-slash"></i>
+            </div>
+
+            <button type="submit" class="submit-btn">log in</button>
+
+            <a href="#" class="forgot-pass">Forgotten Password?</a>
+
+            <div class="member">
+                Not a member?
+                <a href="#">Sign up now!</a>
+            </div>
+
+            <p>Or</p>
+
+            <div class="social-media">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-google-plus-square"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

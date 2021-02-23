@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins' ,sans-serif;
+  text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.side-img {
+    width: 50%;
+}
+
+.side-img img {
+    width: 100%;
+}
+
+.login-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #1877f2;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.input-field,
+.submit-btn {
+    box-shadow: 0 3px 5px rgba(104, 104, 104, 0.8);
+    margin: .7rem 0;
+    width: 50%;
+    background-color: #fff;
+    border: 2px solid #4f73d8;
+    border-radius: 30px;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.submit-btn:focus {
+    outline: none;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 0 1rem;
+    background: none;
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 1.2rem;
+}
+
+.input-field input::placeholder {
+    color: #2650c5;
+}
+
+.input-field label,
+.input-field i {
+    font-size: 1.2rem;
+    color: #466cd4;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #1877f2;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: .3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background-color: #005dd6;
+}
+
+.forgot-pass {
+    color: #0031b8;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.member {
+    color: #888888;
+    font-size: 1.2rem;
+}
+
+.member a {
+    color: #0031b8;
+}
+
+.social-media {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    color: #0065e9;
+}
+
+.social-media i {
+    cursor: pointer;
+    font-size: 3rem;
+    color: #e84118;
+    transition: all .3s ease;
+}
+
+.social-media i:hover {
+    transform: scale(1.1);
+    filter: brightness(120%);
+}
+
+.social-media i:nth-child(odd) {
+    color: #0b6be9;
+}
+
+@media (max-width: 760px) {
+    .side-img {
+        display: none;
+    }
+
+    .login-form {
+        width: 100%;
+    }
+
+    .input-field {
+        width: 80%;
+    }
+
+    .social-media {
+        width: 70%;
+    }
+}

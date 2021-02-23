@@ -8,7 +8,7 @@
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; */
 }
 
 /* Css variables */
