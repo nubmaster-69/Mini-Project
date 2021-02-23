@@ -1,0 +1,1 @@
+This is a mini-project in my second semester. This project is about a laptop e-commerce website.
