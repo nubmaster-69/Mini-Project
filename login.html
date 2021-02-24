@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/login.css">
     <link rel="icon" href="./img/page-icon/man.png">
     <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <title>Log in</title>
+    <title>Account</title>
 </head>
 
 <body>
@@ -16,40 +16,85 @@
     <div class="container">
 
         <div class="side-img">
-            <img src="./img/background/side-img-6.png" alt="">
+            <img src="./img/background/side-img-6.png">
         </div>
 
-        <div class="login-form">
+        <div class="form-container">
 
-            <h2>Log in</h2>
+            <input type="checkbox" id="check">
 
-            <div class="input-field">
-                <label for="user" class="fas fa-user"></label>
-                <input type="text" id="user" placeholder="Username">
-            </div>
+            <form class="login-form" required>
 
-            <div class="input-field">
-                <label for="pass" class="fas fa-lock"></label>
-                <input type="password" id="pass" placeholder="Password" required>
-                <i onclick="showPassword()" id="pass-icon" class="fas fa-eye-slash"></i>
-            </div>
+                <h2>Log in</h2>
 
-            <button type="submit" class="submit-btn">log in</button>
+                <div class="input-field">
+                    <label for="user-sign-in" class="fas fa-user"></label>
+                    <input type="text" id="user-sign-in" placeholder="Username" required autofocus>
+                </div>
 
-            <a href="#" class="forgot-pass">Forgotten Password?</a>
+                <div class="input-field">
+                    <label for="sign-in" class="fas fa-lock"></label>
+                    <input type="password" id="sign-in" placeholder="Password" required>
+                    <i onclick="showPasswordSignIn()" id="sign-in-icon" class="fas fa-eye-slash"></i>
+                </div>
 
-            <div class="member">
-                Not a member?
-                <a href="#">Sign up now!</a>
-            </div>
+                <button type="submit" class="submit-btn">log in</button>
 
-            <p>Or</p>
+                <a href="#" class="forgot-pass">Forgotten Password?</a>
 
-            <div class="social-media">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-google-plus-square"></i>
-                <i class="fab fa-twitter"></i>
-            </div>
+                <div class="member">
+                    Not a member?
+                    <a href="#" onclick="formToggle()">Sign up now!</a>
+
+                </div>
+
+                <p>Or With</p>
+
+                <div class="social-media">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-google-plus-square"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+
+            </form>
+
+            <form class="sign-up-form" required>
+
+                <h2>Sign Up</h2>
+
+                <div class="input-field">
+                    <label for="user-sign-up" class="fas fa-user"></label>
+                    <input type="text" id="user-sign-up" placeholder="Username" required autofocus>
+                </div>
+
+                <div class="input-field">
+                    <label for="sign-up" class="fas fa-lock"></label>
+                    <input type="password" id="sign-up" placeholder="Password" required>
+                    <i onclick="showPasswordSignUp()" id="sign-up-icon" class="fas fa-eye-slash"></i>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign up</button>
+
+                <div class="policy">
+                    <span>By registering, you agree to our
+                        <a href="#">terms of service</a> & <a href="#">privacy policy</a>
+                    </span>
+                </div>
+
+                <div class="member">
+                    Already a member?
+                    <a href="#" onclick="formToggle()">Log in now!</a>
+                </div>
+
+                <p>Or With</p>
+
+                <div class="social-media">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-google-plus-square"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+
+            </form>
 
         </div>
 
