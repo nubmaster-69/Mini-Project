@@ -29,7 +29,7 @@
 
                 <div class="input-field">
                     <label for="user-sign-in" class="fas fa-user"></label>
-                    <input type="text" id="user-sign-in" placeholder="Username" required autofocus>
+                    <input type="text" id="user-sign-in" placeholder="Username" required autofocus autocomplete="off">
                 </div>
 
                 <div class="input-field">
@@ -43,7 +43,7 @@
                 <a href="#" class="forgot-pass">Forgotten Password?</a>
 
                 <div class="member">
-                    Not a member?
+                    Not a member yet?
                     <a href="#" onclick="formToggle()">Sign up now!</a>
 
                 </div>
@@ -64,20 +64,27 @@
 
                 <div class="input-field">
                     <label for="user-sign-up" class="fas fa-user"></label>
-                    <input type="text" id="user-sign-up" placeholder="Username" required autofocus>
+                    <input type="text" id="user-sign-up" placeholder="Username" required autofocus autocomplete="off">
                 </div>
 
                 <div class="input-field">
                     <label for="sign-up" class="fas fa-lock"></label>
                     <input type="password" id="sign-up" placeholder="Password" required>
                     <i onclick="showPasswordSignUp()" id="sign-up-icon" class="fas fa-eye-slash"></i>
+
                 </div>
 
-                <button type="submit" class="submit-btn">Sign up</button>
+                <div class="input-field">
+                    <label for="sign-up-confirm" class="fas fa-lock"></label>
+                    <input type="password" id="sign-up-confirm" placeholder="Confirm Password" required>
+                    <!-- <i onclick="showPasswordSignUp()" id="sign-up-icon" class="fas fa-eye-slash"></i> -->
+                </div>
+
+                <button type="submit" class="submit-btn" onclick="getUserNameAndPassword()">Sign up</button>
 
                 <div class="policy">
                     <span>By registering, you agree to our
-                        <a href="#">terms of service</a> & <a href="#">privacy policy</a>
+                        <a href="#">terms of service</a> & <a href="#">privacy policy.</a>
                     </span>
                 </div>
 

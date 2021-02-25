@@ -153,13 +153,13 @@ p {
     transition: all .3s ease;
 }
 
+.social-media i:nth-child(odd) {
+    color: #0b6be9;
+}
+
 .social-media i:hover {
     transform: scale(1.1);
     filter: brightness(120%);
-}
-
-.social-media i:nth-child(odd) {
-    color: #0b6be9;
 }
 
 @media (max-width: 769px) {
@@ -175,7 +175,7 @@ p {
         width: 80%;
     }
 
-    .member {
+    .member,.submit-btn {
         width: 60%;
         text-align: center;
     }

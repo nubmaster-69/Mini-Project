@@ -27,10 +27,12 @@
   width: calc(100% - 100px);
   max-width: 1280px;
   margin: 0 auto;
+  /* height: 100%; */
 }
 
 .landing-page {
   background: var(--bg-radial);
+  /* height: 100vh; */
 }
 
 header {
@@ -82,6 +84,7 @@ header .menu-toggler {
 /* ==Product showcase== */
 .showcase-container {
   width: 100%;
+  /* height: calc(100% - (40% - 80px)); */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -142,6 +145,7 @@ header .menu-toggler {
 
 /* ==Product showcase images== */
 .img-slider {
+  /* height: calc(100% - (60% - 80px)); */
   padding: 1rem 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);

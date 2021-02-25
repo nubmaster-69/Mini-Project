@@ -26,3 +26,8 @@ function formToggle() {
     else
         document.getElementById('check').checked = true;
 }
+
+function getUserNameAndPassword() {
+    console.log(document.getElementById('user-sign-up').value);
+    console.log(document.getElementById('sign-up').value);
+}
