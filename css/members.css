@@ -13,7 +13,7 @@ body {
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/img/background/bg-2.jpeg') center/cover no-repeat fixed;
+    url('/img/background/bg-3.jpeg') center/cover no-repeat fixed;
 }
 
 .container {
