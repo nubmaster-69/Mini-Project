@@ -15,3 +15,7 @@
 function changeImg(source) {
     document.getElementById('showcase-img').src = source.src;
 }
+
+function changeColor(newColor) {
+    document.documentElement.style.setProperty('--primary-color', newColor);
+}
