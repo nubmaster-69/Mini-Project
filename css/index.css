@@ -18,7 +18,7 @@
   --text-color: #f85d24;
   --shadow: 0 0 6px rgba(0, 0, 0, 0.9);
   --shadow-inset: -3px -3px 5px #ffdddd,
-  3px 3px 5px rgba(0, 0, 0, 0.5);
+                  3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* ==Global wrapper== */
@@ -33,7 +33,6 @@
   overflow: hidden;
   z-index: 2;
 }
-
 
 .landing-page::after {
   z-index: -9;
@@ -153,7 +152,7 @@ header .menu-toggler {
   transform: scale(1.1);
 }
 
-/* ==Product showcase images== */
+/* ==Landing page product showcase images== */
 .img-slider {
   padding: 1rem 0;
   display: grid;
@@ -177,13 +176,21 @@ header .menu-toggler {
 }
 
 
-/* ==Product== */
+.latest-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+
+/* ==Product - Hot deal== */
 .items {
   display: grid;
   gap: .5rem;
   grid-template-areas: 
   'main main side-pic-a'
   'main main side-pic-b';
+  cursor: pointer;
 }
 
 .featured-1 {
@@ -203,12 +210,6 @@ header .menu-toggler {
 
 .products {
   text-align: center;
-}
-
-.latest-products {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
 }
 
 section .intro {
@@ -308,6 +309,7 @@ section .intro {
   transform: translateY(-8%);
 }
 
+
 /* footer */
 footer {
   font-size: 1.2rem;
@@ -381,6 +383,7 @@ footer {
 .copy-right span {
   color: var(--text-color);
 }
+
 
 /* Media query for tablet */
 @media (max-width: 769px) {
