@@ -171,7 +171,7 @@ header .menu-toggler {
 }
 
 .landing-page img {
-  filter: drop-shadow(2 px 4px 4px black);
+  filter: drop-shadow(2px 4px 4px black);
   cursor: pointer;
 }
 
