@@ -14,11 +14,10 @@
 <body>
 
     <div class="landing-page">
-        <div class="wrapper">
-            <header id="top">
-                <a href="#" class="logo">LAP4U.</a>
 
-                <input type="checkbox" id="show-menu">
+        <header id="top">
+            <nav class="nav-bar">
+                <a href="#" class="logo">LAP4U.</a>
 
                 <ul class="nav-links">
                     <li class="nav-link">
@@ -30,20 +29,23 @@
                     <li class="nav-link">
                         <a href="#l-product"><i class="fas fa-layer-group"></i> Products</a>
                     </li>
+
                 </ul>
 
-                <label for="show-menu" class="menu-toggler">
+                <div class="menu-toggler">
                     <i class="fas fa-bars"></i>
-                </label>
+                </div>
+            </nav>
 
-            </header>
+        </header>
 
+        <div class="wrapper">
             <section class="showcase-container">
                 <div class="desc">
                     <h1>Welcome to our store!</h1>
                     <p>No more lagging or crashing! Improve your programming career greatly with our latest technology
                         devices.</p>
-                    <a href="#" class="btn">Shop Now!</a>
+                    <a href="#l-product" class="btn">Shop Now!</a>
                 </div>
 
                 <div class="showcase">
@@ -116,10 +118,8 @@
         <div class="wrapper product-list">
 
             <div class="item sell-item">
-                <!-- <div class="product-info"> -->
                 <img src="./img/products/list/11.png" alt="">
                 <p class="product-name">ASUS RoG Strix G17</p>
-                <!-- </div> -->
                 <div class="detail">
                     <i class="far fa-heart to-fav-list"></i>
                     <span class="price">$ 1792</span>
