@@ -8,17 +8,16 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" href="./img/page-icon/home.png">
     <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <title>LFU | Home</title>
+    <title>LFU | High-end laptop with "Lovey" prices</title>
 </head>
 
 <body>
 
     <div class="landing-page">
-        <div class="wrapper">
-            <header id="top">
-                <a href="#" class="logo">LAP4U.</a>
 
-                <input type="checkbox" id="show-menu">
+        <header id="top">
+            <nav class="nav-bar">
+                <a href="#" class="logo">LAP4U.</a>
 
                 <ul class="nav-links">
                     <li class="nav-link">
@@ -30,20 +29,23 @@
                     <li class="nav-link">
                         <a href="#l-product"><i class="fas fa-layer-group"></i> Products</a>
                     </li>
+
                 </ul>
 
-                <label for="show-menu" class="menu-toggler">
+                <div class="menu-toggler">
                     <i class="fas fa-bars"></i>
-                </label>
+                </div>
+            </nav>
 
-            </header>
+        </header>
 
+        <div class="wrapper">
             <section class="showcase-container">
                 <div class="desc">
                     <h1>Welcome to our store!</h1>
                     <p>No more lagging or crashing! Improve your programming career greatly with our latest technology
                         devices.</p>
-                    <a href="#" class="btn">Shop Now!</a>
+                    <a href="#l-product" class="btn">Shop Now!</a>
                 </div>
 
                 <div class="showcase">
@@ -58,10 +60,10 @@
 
             <section class="img-slider">
 
-                <img onclick="changeImg(this);changeColor('#fb7308')" src="./img/products/img-slider/1.png">
+                <img onclick="changeImg(this);changeColor('#ff3e00')" src="./img/products/img-slider/1.png">
                 <img onclick="changeImg(this);changeColor('#766bd1')" src="./img/products/img-slider/2.png">
-                <img onclick="changeImg(this);changeColor('#2a4ebe')" src="./img/products/img-slider/3.png">
-                <img onclick="changeImg(this);changeColor('#314086')" src="./img/products/img-slider/4.png">
+                <img onclick="changeImg(this);changeColor('#2c6ad9')" src="./img/products/img-slider/3.png">
+                <img onclick="changeImg(this);changeColor('#ff6700')" src="./img/products/img-slider/4.png">
                 <img onclick="changeImg(this);changeColor('#e70213')" src="./img/products/img-slider/5.png">
 
             </section>
@@ -69,23 +71,23 @@
     </div>
 
     <section class="products product-new">
-        <h1 class="intro">Coming Soon</h1>
-        <div class="wrapper best-sell">
+        <h1 class="intro">Latest</h1>
+        <div class="wrapper latest-products">
 
             <div class="item">
-                <img src="./img/products/upcoming/1.png" alt="">
+                <img src="./img/products/new/1.png" alt="">
             </div>
 
             <div class="item">
-                <img src="./img/products/upcoming/2.png" alt="">
+                <img src="./img/products/new/2.png" alt="">
             </div>
 
             <div class="item">
-                <img src="./img/products/upcoming/3.png" alt="">
+                <img src="./img/products/new/3.png" alt="">
             </div>
 
             <div class="item">
-                <img src="./img/products/upcoming/4.png" alt="">
+                <img src="./img/products/new/4.png" alt="">
             </div>
 
         </div>
@@ -95,13 +97,16 @@
         <h1 class="intro">Hot Deal</h1>
         <div class="wrapper items">
 
-            <div class="item featured-1">
+            <div class="item-feature featured-1">
+                <img src="./img/products/featured/main.jpg" alt="">
             </div>
 
-            <div class="item featured-2">
+            <div class="item-feature featured-2">
+                <img src="./img/products/featured/side-pic-a.jpg" alt="">
             </div>
 
-            <div class="item featured-3">
+            <div class="item-feature featured-3">
+                <img src="./img/products/featured/side-pic-b.jpg" alt="">
             </div>
 
         </div>
@@ -113,13 +118,11 @@
         <div class="wrapper product-list">
 
             <div class="item sell-item">
-                <!-- <div class="product-info"> -->
                 <img src="./img/products/list/1.png" alt="">
-                <p class="product-name">ASUS RoG Strix G17</p>
-                <!-- </div> -->
+                <p class="product-name">MSI GE66 10SF</p>
                 <div class="detail">
                     <i class="far fa-heart to-fav-list"></i>
-                    <span class="price">$ 1,792</span>
+                    <span class="price">$ 2,604</span>
                     <i class="fas fa-cart-plus add-to-cart"></i>
                 </div>
             </div>
@@ -199,7 +202,7 @@
 
     <div class="pagination">
         <a href="#" class="page-prev"><i class="fas fa-angle-left"></i></a>
-        <a href="#" class="page-num active">1</a>
+        <a href="./index.html#l-product" class="page-num active">1</a>
         <a href="./page-2.html#l-product" class="page-num">2</a>
         <a href="#" class="page-num">3</a>
         <a href="#" class="page-num">4</a>
@@ -227,7 +230,7 @@
 
                         <li>
                             <a href="#">
-                                <i class="fas fa-door-open"> 08:00am - 22:59pm</i>
+                                <i class="fas fa-door-open"> 08:00am - 11:59pm</i>
                             </a>
                         </li>
 
