@@ -65,3 +65,9 @@ toFavList.forEach(item => {
             item.classList.replace('fas', 'far');
     });
 });
+
+// Sticky navbar after scroll
+window.addEventListener('scroll', () => {
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 0);
+});

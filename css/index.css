@@ -49,10 +49,14 @@
 
 header {
   width: 100%;
-  max-width: 1366px;
-  margin: 0 auto;
   height: 80px;
-  position: relative;
+  position: fixed;
+  z-index: 99;
+}
+
+.sticky {
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 header .logo {
@@ -97,6 +101,7 @@ header .menu-toggler {
 
 /* ==Product showcase== */
 .showcase-container {
+  margin-top: 80px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -404,7 +409,7 @@ footer {
     width: 100%;
     text-align: center;
     background: #fff;
-    top: 100%;
+    top: 99%;
     left: 0;
     overflow: hidden;
     position: absolute;
@@ -412,7 +417,7 @@ footer {
     transition: height .2s linear;
   }
 
-  .nav-links li{
+  .nav-links li {
     margin: 2rem 0;
   }
 
@@ -420,11 +425,12 @@ footer {
     height: 300px;
   }
 
-   header .menu-toggler {
+  header .menu-toggler {
     display: block;
     color: var(--primary-color);
     font-size: 2rem;
     cursor: pointer;
+    transition: color .5s ease-in-out;
   }
 
   header .menu-toggler.menu-close i:before {
@@ -450,7 +456,8 @@ footer {
   }
 
   .social-media {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
+    transition: background-color .5s ease-in-out;
     padding: 0 .5em;
     margin-left: 1rem;
     border-radius: 8px;
@@ -525,6 +532,20 @@ footer {
 
 /* Media query for really small screen devices */
 @media (max-width: 320px) {
+
+  header {
+    height: 40px;
+  }
+
+  header .logo {
+    font-size: .75rem;
+    border-radius: 10px 0 10px 0;
+  }
+
+  header .menu-toggler {
+    font-size: 1.25rem;
+  }
+
   .pagination .page-num,
   .page-prev,
   .page-next {
