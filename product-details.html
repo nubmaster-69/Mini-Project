@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/product-details.css">
+    <link rel="icon" href="./img/page-icon/home.png">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <title>Product Details</title>
+</head>
+
+<body>
+    <div class="landing-page">
+        <header id="top">
+            <nav class="nav-bar">
+                <a href="#" class="logo">LAP4U.</a>
+
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="#"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./login.html"><i class="fas fa-user"></i> Account</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./index.html#l-product"><i class="fas fa-layer-group"></i> Products</a>
+                    </li>
+
+                </ul>
+
+                <div class="menu-toggler">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+
+        </header>
+    </div>
+
+    <div class="product-detail">
+
+        <div class="showcase">
+            <div class="showcase__img">
+                <img id="showcase-img" src="./img/products/Gaming-laptop/1/1.png" alt="">
+            </div>
+
+            <div class="showcase__img--slider">
+                <img class="img-slide" src="./img/products/Gaming-laptop/1/1.png" alt="">
+                <img class="img-slide" src="./img/products/Gaming-laptop/1/2.png" alt="">
+                <img class="img-slide" src="./img/products/Gaming-laptop/1/3.png" alt="">
+                <img class="img-slide" src="./img/products/Gaming-laptop/1/4.png" alt="">
+                <img class="img-slide" src="./img/products/Gaming-laptop/1/5.png" alt="">
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="product__name">
+                ASUS 17.3" Republic of Gamers Strix G17 Gaming Laptop
+            </div>
+
+            <div class="product__rating">
+                <span class="rate">
+                    <span id="total-rate">4.9</span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </span>
+
+                <span class="review">
+                    <span id="review-amount">69</span> Reviews
+                </span>
+
+                <span class="sold">
+                    <span id="sold-amount">112</span> Sold
+                </span>
+            </div>
+
+            <div class="product__desc">
+
+                <p class="overview">
+                    Take your gaming on-the-go with the Acer 15.6" Nitro 5 AN515-54-599H Gaming Laptop. Featuring a 2.4
+                    GHz
+                    Intel Core i5-9300H quad-core processor with 8GB of DD4 memory and a fast 512GB M.2 NVMe PCIe
+                    solid-state drive, this gaming laptop is designed to quickly load games and applications. Its 15.6"
+                    1920x1080 resolution IPS (in-plane switching).
+                </p>
+
+                <a href="#" class="btn-overview">More Detail</a>
+
+            </div>
+
+            <div class="product__price">
+                <div class="old-price">
+                    Old price: <span id="old-price">$1,799.99</span>
+                </div>
+
+                <div class="new-price">
+                    New price: <span id="new-price">$1,599.99</span>
+                </div>
+            </div>
+
+            <div class="payment">
+                <span class="quantity-info">
+                    <input disabled type="button" value="-" id="quantity-decrease" class="btn-quantity">
+                    <input type="text" id="quantity" value="1" maxlength="2">
+                    <input type="button" value="+" id="quantity-increase" class="btn-quantity">
+                </span>
+
+                <span class="payment-btn">
+                    <button type="submit" class="btn btn-to-cart">to cart</button>
+                    <button type="submit" class="btn btn-submit">buy now</button>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/product-details.js"></script>
+</body>
+
+</html>
