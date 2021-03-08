@@ -1,4 +1,4 @@
-let images = [
+const images = [
     {
         imgSrc: "./img/products/img-slider/1.png",
         bgColor: "#ff3e00"
@@ -20,6 +20,15 @@ let images = [
         bgColor: "#e70213"
     }
 ];
+
+const productImgs = document.querySelectorAll('.product-img');
+const productNames = document.querySelectorAll('.product-name');
+const productPrices = document.querySelectorAll('.price');
+
+const menuToggler = document.querySelector('.menu-toggler');
+const navLinks = document.querySelector('.nav-links');
+const toFavList = document.querySelectorAll('.to-fav-list');
+const products = document.querySelectorAll('.product');
 
 // let idx = 0, imagesLength = images.length;
 // setInterval(function autoSlide() {
@@ -47,16 +56,13 @@ function changeColor(newColor) {
     document.documentElement.style.setProperty('--primary-color', newColor);
 }
 
-
-const menuToggler = document.querySelector('.menu-toggler');
-const navLinks = document.querySelector('.nav-links');
+// Menu toggle
 menuToggler.addEventListener('click', () => {
     navLinks.classList.toggle('menu-active');
     menuToggler.classList.toggle('menu-close');
 });
 
 // Add item(s) to favorite list
-const toFavList = document.querySelectorAll('.to-fav-list')
 toFavList.forEach(item => {
     item.addEventListener('click', () => {
         if (item.classList.contains('far'))
