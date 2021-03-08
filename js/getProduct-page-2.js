@@ -49,24 +49,18 @@ const productList = [
     },
 ];
 
+let getProductDesc = () => {
+    let len = productList.length;
+    for (let i = 0; i < len; i++) {
+        createItem(i);
+    }
+}
+
+getProductDesc();
+
+const products = document.querySelectorAll('.product');
 products.forEach(product => {
     product.addEventListener('click', (e) => {
         window.location.href = "./product-details.html";
     });
 });
-
-let getProductDesc = () => {
-    let len = productList.length;
-    for (let i = 0; i < len; i++)
-        setProductDesc(i);
-}
-
-let setProductDesc = (idx) => {
-    productImgs[idx].src = productList[idx].img;
-    productNames[idx].textContent = productList[idx].name;
-    productPrices[idx].textContent = productList[idx].price;
-}
-
-getProductDesc();
-
-console.log(productList);

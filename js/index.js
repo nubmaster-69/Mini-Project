@@ -21,14 +21,7 @@ const images = [
     }
 ];
 
-const productImgs = document.querySelectorAll('.product-img');
-const productNames = document.querySelectorAll('.product-name');
-const productPrices = document.querySelectorAll('.price');
-
-const menuToggler = document.querySelector('.menu-toggler');
-const navLinks = document.querySelector('.nav-links');
-const toFavList = document.querySelectorAll('.to-fav-list');
-const products = document.querySelectorAll('.product');
+const productContainer = document.querySelector('.product-list');
 
 // let idx = 0, imagesLength = images.length;
 // setInterval(function autoSlide() {
@@ -56,24 +49,60 @@ function changeColor(newColor) {
     document.documentElement.style.setProperty('--primary-color', newColor);
 }
 
-// Menu toggle
-menuToggler.addEventListener('click', () => {
-    navLinks.classList.toggle('menu-active');
-    menuToggler.classList.toggle('menu-close');
-});
+// create the product and append to the page
+let createItem = (idx) => {
 
-// Add item(s) to favorite list
-toFavList.forEach(item => {
-    item.addEventListener('click', () => {
-        if (item.classList.contains('far'))
-            item.classList.replace('far', 'fas');
-        else
-            item.classList.replace('fas', 'far');
-    });
-});
+    // item structure
+    {/* 
+<div class="item sell-item">
+    <div class="product" id="product-1">
+        <img class="product-img" src="" alt="">
+        <p class="product-name"></p>
+    </div>
+    <div class="detail">
+        <i class="far fa-heart to-fav-list"></i>
+        <span class="price"></span>
+        <i class="fas fa-cart-plus add-to-cart"></i>
+    </div>
+</div> */}
 
-// Sticky navbar after scroll
-window.addEventListener('scroll', () => {
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 0);
-});
+    let item = document.createElement('div');
+    item.classList = 'item sell-item';
+
+    let productDiv = document.createElement('div');
+    productDiv.classList = 'product';
+
+    let image = document.createElement('img');
+    image.classList = 'product-img';
+    image.src = productList[idx].img;
+
+    let p = document.createElement('p');
+    p.classList = 'product-name';
+    p.textContent = productList[idx].name;
+
+    productDiv.appendChild(image);
+    productDiv.appendChild(p);
+
+    item.appendChild(productDiv);
+
+    let productDetailDiv = document.createElement('div');
+    productDetailDiv.classList = 'detail'
+
+    let heartIcon = document.createElement('i');
+    heartIcon.classList = 'far fa-heart to-fav-list'
+
+    let span = document.createElement('span');
+    span.classList = 'price';
+    span.textContent = productList[idx].price;
+
+    let cartIcon = document.createElement('i');
+    cartIcon.classList = 'fas fa-cart-plus add-to-cart'
+
+    productDetailDiv.appendChild(heartIcon);
+    productDetailDiv.appendChild(span);
+    productDetailDiv.appendChild(cartIcon);
+
+    item.appendChild(productDetailDiv);
+
+    productContainer.append(item);
+}
