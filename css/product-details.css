@@ -29,8 +29,6 @@
 }
 
 .landing-page {
-    /* background-color: #333; */
-    /* min-height: 200vh; */
   position: relative;
   overflow: hidden;
   z-index: 2;
@@ -100,11 +98,33 @@ header .menu-toggler {
 
 .showcase__img {
   text-align: center; 
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 450px;
 }
 
 .showcase__img img {
+  transform: translateX(-200%);
+  position: absolute;
   max-width: 450px;
-  width: 100%;
+  width: 90%;
+}
+
+.showcase__img .active-slide {
+  animation: leftToRight .35s forwards;
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(-200%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
 }
 
 .showcase__img--slider {
@@ -120,7 +140,7 @@ header .menu-toggler {
   border-radius: 10px;
   margin: 0 1rem;
   padding: 4px;
-  transition: border-color .2s ease;
+  transition: border-color .3s ease;
 }
 
 .showcase__img--slider img:hover {
@@ -133,7 +153,6 @@ header .menu-toggler {
   color: #353b48;
   font-size: 2rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 .product__rating {
@@ -168,6 +187,14 @@ header .menu-toggler {
   font-weight: 400;
 }
 
+.product__desc h3 {
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #353b48;
+}
+
 .btn-overview {
   color: #567eeb;
 }
@@ -189,58 +216,88 @@ header .menu-toggler {
 }
 
 .payment {
-  margin: 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .quantity-info {
   margin-bottom: .5rem;
 }
 
-.quantity-info input[type="text"] {
-  font-size: 1.2rem;
+.quantity-info input,
+.btn {
+  font-size: 1rem;
   text-align: center;
-  width: 100px;
-  border-radius: 8px;
+  padding: .4rem .8rem;
   outline: none;
-  border: 2px solid var(--dark-gray);
-  pointer-events: none;
-}
-
-.btn-quantity {
-  color: var(--light);
-  background-color: var(--primary-color);
-  font-size: 1.2rem;
-  width: 40px;
-  border-radius: 8px;
+  border-radius: 20px;
+  margin-right: .5rem;
+  text-transform: capitalize;
   border: none;
   outline: none;
-  transition: transform .2s ease;
-  cursor: pointer;
 }
 
-.btn-quantity:active, .btn:active {
+.quantity-info input {
+  width: 70px;
+  border: 2px solid var(--dark-gray);
+  transition: all.3s ease;
+}
+
+.quantity-info input:focus {
+  border-color: #256eff;
   transform: scale(.95);
 }
 
-.btn-quantity:disabled {
-  background-color: var(--dark-gray);
-  cursor: not-allowed;
-}
-
 .btn {
-  transition: transform .2s ease;
-  padding: .5rem;
-  border-radius: 4px;
-  outline: none;
-  border: none;
-  color: var(--light);
-  background-color: var(--primary-color);
-  font-size: 1.1rem;
-  margin-left: 1rem;
-  text-transform: capitalize;
-  font-weight: 300;
+  color: #fff;
+  transition: .3s ease;
 }
 
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(120%);
+}
+
+.btn:active {
+  transform: scale(.98);
+}
+
+.btn.btn-to-cart {
+  background-color: #256eff;
+}
+
+.btn.btn-buy {
+  background-color: var(--primary-color);
+}
+
+.share {
+  margin: 1rem 0;
+}
+
+.share .share-title {
+  font-size: 1.2rem;
+  color: #353b48;
+}
+
+.share .social-media {
+  font-size: 1.5rem;
+}
+
+.share .social-media i {
+  margin-left: .5rem;
+  border: 2px solid #353b48;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37px;
+  transition: all .3s ease;
+}
+
+.share .social-media i:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
 
 @media (max-width: 769px) {
 
@@ -292,37 +349,22 @@ header .menu-toggler {
 
     .content {
       margin-top: 2rem;
-      text-align: center;
     }
 
-    .quantity-info input[type="text"] {
+    .quantity-info input {
       width: 60px;
     }
 
-    .btn {
-      padding: .25rem .5rem;
-      font-size: .95rem;
-    }
 }
 
 @media (max-width: 375px) {
 
+  .showcase__img {
+    height: 350px;
+  }
+
   .product__rating {
     font-size: .90rem;
-  }
-
-  .payment {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .btn-quantity {
-    font-size: 1rem;
-  }
-
-  .quantity-info input[type="text"] {
-    width: 120px;
-    font-size: 1rem;
   }
 
   .btn {
@@ -330,8 +372,24 @@ header .menu-toggler {
   }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 320px) {
+
+  .showcase__img {
+    height: 280px;
+  }
+
   .product__rating {
     font-size: .75rem;
+  }
+
+  .payment-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .quantity-info input {
+    width: 140px;
+    font-size: 1rem;
+    margin-bottom: .5rem;
   }
 }

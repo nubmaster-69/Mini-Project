@@ -1,54 +1,17 @@
 const menuToggler = document.querySelector('.menu-toggler');
 const navLinks = document.querySelector('.nav-links');
 
-const quantity = document.querySelector('#quantity');
-const btnIncrease = document.querySelector('#quantity-increase');
-const btnDecrease = document.querySelector('#quantity-decrease');
-
-let curQuantity = parseInt(quantity.value);
-
-const showcaseImg = document.querySelector('#showcase-img');
+const mainImgSlide = document.querySelectorAll('.main-img');
 const imgSlide = document.querySelectorAll('.img-slide');
 
 imgSlide.forEach(img => {
-    img.addEventListener('mouseenter', (e) => {
-        showcaseImg.src = e.currentTarget.getAttribute('src');
+    img.addEventListener('click', (e) => {
+        mainImgSlide.forEach(mainImg => {
+            mainImg.classList.remove('active-slide');
+        });
+        mainImgSlide[e.currentTarget.id - 1].classList.add('active-slide');
     })
-});
-
-// increase/decrease quantity
-btnIncrease.addEventListener('click', () => {
-    curQuantity++;
-    if (curQuantity > 99) {
-        updateBtnState(99);
-        btnIncrease.disabled = true;
-        return;
-    }
-
-    resetBtnState();
-});
-
-btnDecrease.addEventListener('click', () => {
-    curQuantity--;
-    if (curQuantity <= 1) {
-        updateBtnState(1);
-        btnDecrease.disabled = true;
-        return;
-    }
-
-    resetBtnState();
-});
-let resetBtnState = () => {
-    quantity.value = curQuantity;
-    btnIncrease.disabled = false;
-    btnDecrease.disabled = false;
-}
-let updateBtnState = (num) => {
-    curQuantity = num;
-    quantity.value = curQuantity
-}
-
-
+})
 
 // Menu toggle 
 menuToggler.addEventListener('click', () => {
@@ -72,4 +35,3 @@ toFavList.forEach(item => {
             item.classList.replace('fas', 'far');
     });
 });
-
