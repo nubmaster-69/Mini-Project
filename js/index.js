@@ -51,58 +51,18 @@ function changeColor(newColor) {
 
 // create the product and append to the page
 let createItem = (idx) => {
-
-    // item structure
-    {/* 
-<div class="item sell-item">
-    <div class="product" id="product-1">
-        <img class="product-img" src="" alt="">
-        <p class="product-name"></p>
+    let item = document.createElement('div');
+    item.classList = 'item sell-item';
+    item.innerHTML = `
+    <div class="product">
+        <img class="product-img" src="${productList[idx].img}" alt="">
+        <p class="product-name">${productList[idx].name}</p>
     </div>
     <div class="detail">
         <i class="far fa-heart to-fav-list"></i>
-        <span class="price"></span>
+        <span class="price">${productList[idx].price}</span>
         <i class="fas fa-cart-plus add-to-cart"></i>
     </div>
-</div> */}
-
-    let item = document.createElement('div');
-    item.classList = 'item sell-item';
-
-    let productDiv = document.createElement('div');
-    productDiv.classList = 'product';
-
-    let image = document.createElement('img');
-    image.classList = 'product-img';
-    image.src = productList[idx].img;
-
-    let p = document.createElement('p');
-    p.classList = 'product-name';
-    p.textContent = productList[idx].name;
-
-    productDiv.appendChild(image);
-    productDiv.appendChild(p);
-
-    item.appendChild(productDiv);
-
-    let productDetailDiv = document.createElement('div');
-    productDetailDiv.classList = 'detail'
-
-    let heartIcon = document.createElement('i');
-    heartIcon.classList = 'far fa-heart to-fav-list'
-
-    let span = document.createElement('span');
-    span.classList = 'price';
-    span.textContent = productList[idx].price;
-
-    let cartIcon = document.createElement('i');
-    cartIcon.classList = 'fas fa-cart-plus add-to-cart'
-
-    productDetailDiv.appendChild(heartIcon);
-    productDetailDiv.appendChild(span);
-    productDetailDiv.appendChild(cartIcon);
-
-    item.appendChild(productDetailDiv);
-
+    `
     productContainer.append(item);
 }
